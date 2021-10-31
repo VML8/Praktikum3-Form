@@ -1,0 +1,30 @@
+<style>
+.parent {
+    display: flex;
+    justify-content: space-between;
+}
+
+.parent:first-of-type > div:last-child { order: -1; }
+
+p { background-color: #ddd;}
+</style>
+
+<p>Method 1: Use <code>justify-content: space-between</code> and <code>order-1</code></p>
+
+<div class="parent">
+    <div class="child" style="float:right"> Ignore parent? </div>
+    <div>another child </div>
+</div>
+
+<hr>
+
+<p>Method 2: Use <code>justify-content: space-between</code> and reverse the order of 
+            divs in the mark-up</p>
+
+<div class="parent">
+    <div>another child </div>
+    <div class="child" style="float:right"> Ignore parent? </div>
+</div>
+
+
+source : https://stackoverflow.com/questions/36182635/making-a-flex-item-float-right

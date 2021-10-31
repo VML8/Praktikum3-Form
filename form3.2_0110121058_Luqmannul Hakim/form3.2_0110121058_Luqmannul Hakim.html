@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        main {
+            width: 75%;
+            margin: auto;
+            margin-top: 10px;
+            border: 2px solid gray;
+        }
+        td {
+            vertical-align: top;
+            padding: 2px;
+        }
+        textarea {
+            resize: none;
+        }
+        .topnavbar {
+            border: 2px solid black;
+            background-color: whitesmoke;
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+        }
+        .nav {
+            margin: 10px;
+            width: 100%;
+        }
+        .navfirst{
+            justify-content: flex-start;
+            display: flex;
+        }
+        .navlast {
+            justify-content: flex-end;
+        }
+        .main {
+            margin: 20px;
+            display: flex;
+        }
+        .leftside {
+            width: 35%;
+            margin: 1px;
+        }
+        .rightside {
+            width: 65%;
+            margin: 1px;
+        }
+        .content {
+            width: 100%;
+            margin: 2px;
+        }
+        .parinlinenomargin {
+            margin: 0;
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav style="position: static;">
+            <div class="topnavbar">
+                <div class="navfirst">
+                    <div>
+                        <p class="nav">[ <a href="#">Home</a> ]</p>
+                    </div>
+                    <div>
+                        <p class="nav">[ <a href="#">Generate Link</a> ]</p>
+                    </div>
+                    <div>
+                        <p class="nav">[ <a href="#">Transaction History</a> ]</p>
+                    </div>
+                    <div>
+                        <p class="nav">[ <a href="#">Policy</a> ]</p>
+                    </div>
+                </div>
+                <div class="navlast">
+                    <div>
+                        <p class="nav">[ <a href="#">Logout</a> ]</p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <form action="#">
+            <div class="main">
+                <div class="leftside">
+                    <div class="content">
+                        <img src="https://via.placeholder.com/300" alt="placeholder">
+                        <label>Upload Picture :</label> <input type="file">
+                    </div>
+                </div>
+                <div class="rightside">
+                    <div class="content">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><label for="Title">Title here :</label></td>
+                                    <td><input type="text" id="Title"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="Desc">Description :</label></td>
+                                    <td><textarea name="description" cols="30" rows="10" id="Desc"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="accnum">Account Number :</label></td>
+                                    <td><input type="number" id="accnum"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="Bank">Bank :</label></td>
+                                    <td><input type="text" id="Bank"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="Acchold">Account Holder :</label></td>
+                                    <td><input type="text" id="Acchold"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="transaction">Transaction :</label></td>
+                                    <td>
+                                        <select id="transaction">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                        <p style="margin-top: 0;">*if the transaction is for 3 person, choose 3 from the  drop-down lost</p>
+                                        <input type="checkbox" id="sendphone">
+                                        <label for="sendphone">Send to Mobile Phone</label>
+                                        <br>
+                                        <input type="checkbox" id="sendemail">
+                                        <label for="sendemail">Send to Email</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><label for="mobilephone">Send to Mobile Phone :</label></td>
+                                    <td><input type="number" id="mobilephone"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="email">Send to Email :</label></td>
+                                    <td><input type="text" id="email"></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><input type="submit"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>
